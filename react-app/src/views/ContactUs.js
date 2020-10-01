@@ -25,7 +25,7 @@ function ContactUs() {
   }
 
   return (
-    <Container className="mt-3 mt-md-5">
+    <Container className="mt-3 mt-md-5 jumbotron py-3 text-white" style={ { backgroundColor:  "#020202a3"} }>
       {/*
 
                 Extend bootstrap h1 class to include the CSS in the below tag.
@@ -33,9 +33,11 @@ function ContactUs() {
                 Get invoke the axios.get from this file and pass the relevant 
                 information to the ContactInfo component as a prop.
             */}
-      <Row>
-        {" "}
-        <h1 className="text-center text-md-left">{title}</h1>
+      <Row className="text-center text-md-left">
+          <Col>
+          <h1>{title}</h1>
+          </Col>
+        
       </Row>
       <Row>
         <Col md>

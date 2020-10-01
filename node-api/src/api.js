@@ -18,21 +18,22 @@ app.get("/page/:pageName", async (req, res) => {
         var newJson = {
           id: page[0].id,
           title: page[0].title.rendered,
-          content: page[0].content.rendered,
+          content: page[0].content.rendered
         };
         return res.json(newJson);
       }
       return json(notFound);
     } catch (e) {
       res.status(500);
-      return res.json("tet");
+      return res.json(e);
     }
   } catch (e) {
     res.status(500);
-    return res.json("jo");
+    return res.json(e);
   }
 });
 
+//Using dotenv package to store environment variables.
 const server = app.listen(process.env.PORT || 7001, () => {
   console.log("Started at http://localhost:%d\n", server.address().port);
 });

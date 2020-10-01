@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import axios from 'axios'
 
 export function useAxiosGet(url) {
+  //Custom hook utilised when making axios requests. Keeps component code cleaner.
     const [request, setRequest] = useState({
         loading: false,
         data: null,
