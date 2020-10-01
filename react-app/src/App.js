@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header.js';
+import ContactUs from './views/ContactUs.js'
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="jumbotron">
+       test
     </div>
   );
 }
