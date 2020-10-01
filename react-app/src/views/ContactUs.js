@@ -15,6 +15,7 @@ function ContactUs() {
             */}
             <h1 className=" mt-3 mt-md-5 text-center text-md-left">GET IN TOUCH</h1>
             <ContactForm />
+            <ContactInfo />
         </Container>
     )
 }
