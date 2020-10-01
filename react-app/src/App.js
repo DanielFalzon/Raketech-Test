@@ -6,8 +6,10 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="jumbotron">
-       test
+    <div>
+      {/* Implement react-router-dom as per description in header.js*/}
+       <Header />
+       <ContactUs />
     </div>
   );
 }

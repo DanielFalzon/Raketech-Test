@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ContactInfo() {
+function ContactInfo(props) {
     return (
         <div>
             

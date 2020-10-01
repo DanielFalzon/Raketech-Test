@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Aileron';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Aileron Thin'), local('Aileron-Thin'),
+         url('./fonts/aileron/Aileron-Thin.woff') format('woff')
+}
+
+$font-family-sans-serif: 'Aileron', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-base: 'Aileron';
