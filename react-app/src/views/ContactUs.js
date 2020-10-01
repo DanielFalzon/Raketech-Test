@@ -1,23 +1,51 @@
-import React from 'react';
-import { Container } from "react-bootstrap";
-import ContactForm from '../components/ContactForm.js';
-import ContactInfo from '../components/ContactInfo.js';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import ContactForm from "../components/ContactForm.js";
+import ContactInfo from "../components/ContactInfo.js";
+import Loader from "../components/Loader";
+import { useAxiosGet } from "../hooks/useAxiosGet";
 
 function ContactUs() {
-    return (
-        <Container>
-            {/*
-                Title must come from wordpress.
+  const url = "http://localhost:7000/page/contact-us";
+  const page = useAxiosGet(url);
+
+  let content, title;
+
+  if (page.error) {
+    content = <p>There was an error please refresh or try again later..</p>;
+  }
+
+  if (page.loading) {
+    content = <Loader />;
+  }
+
+  if (page.data) {
+    title = page.data.title;
+    content = <ContactInfo content={page.data.content} />;
+  }
+
+  return (
+    <Container className="mt-3 mt-md-5">
+      {/*
+
                 Extend bootstrap h1 class to include the CSS in the below tag.
 
                 Get invoke the axios.get from this file and pass the relevant 
                 information to the ContactInfo component as a prop.
             */}
-            <h1 className=" mt-3 mt-md-5 text-center text-md-left">GET IN TOUCH</h1>
-            <ContactForm />
-            <ContactInfo />
-        </Container>
-    )
+      <Row>
+        {" "}
+        <h1 className="text-center text-md-left">{title}</h1>
+      </Row>
+      <Row>
+        <Col md>
+          <ContactForm />
+        </Col>
+
+        <Col md>{content}</Col>
+      </Row>
+    </Container>
+  );
 }
 
-export default ContactUs
+export default ContactUs;

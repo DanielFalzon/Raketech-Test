@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 export default class ContactForm extends Component {
   render() {
     return (
-      <Form>
+      <Form className="mt-4">
           {/* Implement e-mail validation*/}
         <Form.Group controlId="contactFormName">
           <Form.Label>Full Name</Form.Label>

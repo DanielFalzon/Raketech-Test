@@ -1,33 +1,21 @@
-import React from 'react';
-import Loader from './Loader';
-import { useAxiosGet } from '../hooks/useAxiosGet';
+import React, { Component } from "react";
 
-function ContactInfo(props) {
-    //Get URL from environment variable.
-    const url = "http://localhost:7000/page/contact-us";
-    const page = useAxiosGet(url);
+export class ContactInfo extends Component {
+  constructor(props) {
+    super(props);
 
-    var content = null;
+    this.state = {
+      content: this.props.content,
+    };
+  }
+   
+  render() {
+    return <div className="mt-5 mt-md-5 entry-content">
+         {/*HTML is being rendered without the wordpress styling*/}
+        <div dangerouslySetInnerHTML = { { __html: this.state.content } }></div>
+    </div>
 
-    if (page.error) {
-        content = <p>There was an error please refresh or try again later..</p>;
-    }
-    
-    if(page.loading){
-        content = (<Loader />)
-    }
-
-    if(page.data){
-        content = (
-        <h1>{page.data.title}</h1>
-        )
-    }
-
-    return (
-        <div>
-            {content}
-        </div>
-    )
+  }
 }
 
-export default ContactInfo
+export default ContactInfo;
