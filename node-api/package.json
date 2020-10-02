@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "watch": {
-    "test": "{src,test}/api.js"
+    "test": "{src,__test__}/*js"
   },
   "scripts": {
     "test": "jest",
