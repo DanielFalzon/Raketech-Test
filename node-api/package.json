@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Node API for raketech test",
   "main": "index.js",
+  "homepage": ".",
   "engines": {
     "node": "12.18.4"
   },
