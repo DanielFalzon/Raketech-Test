@@ -28,9 +28,9 @@ function ContactForm() {
       setAlertContent(res);
     });
   }
-
+{/*Formik package utilized to handle events by form and error viewing.*/}
   return (
-    //Formik package utilized to handle events by form and error viewing.
+    
     <div>
       
       <Formik
