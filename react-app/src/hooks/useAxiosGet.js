@@ -24,10 +24,16 @@ export function useAxiosGet(url) {
               error: false,
             });
           })
-          .catch(() => {
+          .catch((e) => {
+            let errMsg
+            if(e.response){
+              errMsg = e.response.data
+            } else {
+              errMsg = {error: "no connection with API"}
+            }
             setRequest({
               loading: false,
-              data: null,
+              data: errMsg,
               error: true,
             });
           });

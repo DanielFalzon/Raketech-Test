@@ -116,7 +116,7 @@ function ContactForm() {
                 {errors.message}
               </Form.Control.Feedback>
             </Form.Group>
-            <Button type="submit">Submit form</Button>
+            <Button type="submit" className="w-100 mb-4">Send Message</Button>
           </Form>
         )}
       </Formik>
