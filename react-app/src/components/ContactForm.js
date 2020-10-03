@@ -23,7 +23,7 @@ function ContactForm() {
       subject: data.subject,
       message: data.message,
     };
-    console.log(reqData);
+
     axios.post(`${process.env.REACT_APP_NODE_API}post-message`, reqData).then((res) => {
       setAlertContent(res);
     });

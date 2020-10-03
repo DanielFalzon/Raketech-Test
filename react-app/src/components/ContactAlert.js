@@ -37,11 +37,11 @@ export class ContactAlert extends Component {
           <Alert
             show={true}
             variant="success"
-            className="mt-4 d-flex justify-content-between align-items-center"
+            className="mt-2 d-flex justify-content-between align-items-center"
           >
             <div>{response}</div>
           </Alert>
-          <p>Sent to {sentBy}</p>
+          <p>Our response will be sent to {sentBy}</p>
         </div>
       );
     }

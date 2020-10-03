@@ -30,7 +30,7 @@ function ContactUs() {
 
   //Render the component withe variables assigned as above.
   return (
-    <Container className="mt-3 mt-md-5 jumbotron py-3 text-white" style={ { backgroundColor:  "#020202a3"} }>
+    <Container className="mt-3 mt-md-5 jumbotron py-3 text-white bg-dark" style={ { opacity: 0.9 } }>
 
       <Row className="text-center text-md-left">
           <Col>
