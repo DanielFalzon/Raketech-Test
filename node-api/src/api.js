@@ -17,7 +17,7 @@ app.get("/page/:pageId", async (req, res) => {
   const { pageId } = req.params;
 
   axios
-    .get(`http://localhost:8000/wp-json/wp/v2/pages/${pageId}`)
+    .get(`${process.env.WP_API}/wp-json/wp/v2/pages/${pageId}`)
     .then((page) => {
       if (page.data) {
         var newJson = {
@@ -55,7 +55,7 @@ app.post(
     }
 
     axios
-      .get(`http://localhost:8000/wp-json/wp/v2/pages/5`)
+      .get(`${process.env.WP_API}/wp-json/wp/v2/pages/5`)
       .then((page) => {
         if (page.data) {
           const responseMsg = {

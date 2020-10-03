@@ -24,7 +24,7 @@ function ContactForm() {
       message: data.message,
     };
     console.log(reqData);
-    axios.post("http://localhost:7000/post-message", reqData).then((res) => {
+    axios.post(`${process.env.REACT_APP_NODE_API}/post-message`, reqData).then((res) => {
       setAlertContent(res);
     });
   }
