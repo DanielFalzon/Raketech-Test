@@ -28,11 +28,11 @@ function ContactForm() {
       setAlertContent(res);
     });
   }
-{/*Formik package utilized to handle events by form and error viewing.*/}
+
   return (
     
     <div>
-      
+      {/*Formik package utilized to handle events by form and error viewing.*/}
       <Formik
         initialValues={{ fullname: "", email: "", subject: "", message: "" }}
         validationSchema={validationSchema}
