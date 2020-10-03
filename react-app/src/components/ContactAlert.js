@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Alert } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { setNestedObjectValues } from "formik";
 
 export class ContactAlert extends Component {
   constructor(props) {
