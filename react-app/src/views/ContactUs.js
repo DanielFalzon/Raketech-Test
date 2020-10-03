@@ -6,7 +6,7 @@ import Loader from "../components/Loader";
 import { useAxiosGet } from "../hooks/useAxiosGet";
 
 function ContactUs() {
-  const url = "http://localhost:7000/page/contact-us";
+  const url = "http://localhost:7000/page/5";
   const page = useAxiosGet(url);
 
   let content, title;

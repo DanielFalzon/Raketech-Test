@@ -5,7 +5,7 @@ export class ContactInfo extends Component {
     super(props);
 
     this.state = {
-      content: this.props.content,
+      content: this.props.content
     };
   }
    
